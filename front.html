@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MANAGEMENT</title>
+    <style>
+        * {
+            padding: 0px;
+            box-sizing: border-box;
+            margin: 0px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        
+        body {
+            background-color: black;
+        }
+        
+        .header {
+            display: flex;
+            color: white;
+            padding: 30px;
+            border-radius: 20px;
+        }
+        
+        h1 {
+            padding-right: 15%;
+            text-align: center;
+            align-items: center;
+            padding-left: 20px;
+        }
+        
+        .logo {
+            color: aqua;
+        }
+        
+        .navbar {
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+        }
+        
+        .navbar ul {
+            padding-left: 100px;
+            display: flex;
+            list-style: none;
+        }
+        
+        .navbar ul li {
+            float: left;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: large;
+        }
+        
+        .navbar ul li:hover {
+            border-radius: 10px;
+            box-shadow: 5px 3px;
+            color: blue;
+        }
+        
+        .navbar ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 10px;
+        }
+        
+        .navbar ul li a:hover {
+            color: rgb(17, 0, 255);
+        }
+        
+        .search-container {
+            display: flex;
+            padding-left: 50vh;
+            float: inline-end;
+        }
+        
+        .search-input {
+            padding: 8px;
+            margin-right: 10px;
+            border-radius: 10px;
+        }
+        
+        .search-button {
+            background-color: #333333a2;
+            color: rgba(255, 255, 255, 0.33);
+            border: none;
+            padding: 8px 15px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .search-button:hover {
+            border-radius: 10px;
+            color: rgb(0, 249, 100);
+            box-shadow: 3px 2px;
+        }
+        
+        .content {
+            align-items: center;
+            justify-content: space-between;
+            color: white;
+            margin: 130px 80px;
+            display: flex;
+        }
+        
+        .left {
+            padding-left: 10%;
+        }
+        
+        .left h1 {
+            align-items: center;
+            text-align: center;
+            display: flex;
+            padding: 8px;
+        }
+        
+        h2 {
+            padding: 5px;
+        }
+        
+        p {
+            padding: 5px;
+        }
+        
+        .join {
+            background-color: #333333a2;
+            color: white;
+            font-size: 3vh;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .join:hover {
+            border-radius: 10px;
+            color: hotpink;
+            box-shadow: 3px 2px;
+        }
+        
+        .left h1 span {
+            color: aqua;
+        }
+        
+        .right {
+            padding: 40px;
+            height: 100%;
+        }
+        
+        .ipllogo {
+            width: 500px;
+            cursor: pointer;
+        }
+        
+        hr {
+            margin: 40px 84px;
+            height: 1.2px;
+        }
+        
+        .containear {
+            color: white;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding-bottom: 100px;
+        }
+        
+        .card1 {
+            border: 2px solid white;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: rgba(128, 128, 128, 0.447);
+            margin: 20px;
+        }
+        
+        .shop {
+            padding: 10px;
+            margin: 10px;
+            border-radius: 10px;
+            background-color: #333333a2;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .shop:hover {
+            box-shadow: 3px 2px;
+            color: rgb(21, 176, 96);
+            border-radius: 10px;
+        }
+        
+        .imgcard {
+            height: auto;
+            width: 250px;
+        }
+        
+        .card2 {
+            border: 2px solid white;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: rgba(128, 128, 128, 0.447);
+            margin: 20px;
+        }
+        
+        .card3 {
+            border: 2px solid white;
+            padding: 10px;
+            margin: 20px;
+            border-radius: 10px;
+            background-color: rgba(128, 128, 128, 0.447);
+        }
+        
+        p {
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .line1 {
+            margin: 10px 20px;
+        }
+        
+        .line2 {
+            margin: 10px 20px;
+        }
+        
+        .line3 {
+            margin: 10px 20px;
+        }
+        /*footer*/
+        
+        .footer {
+            background-color: #f8f9fa;
+            color: #333;
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid #ccc;
+        }
+        
+        .footer a {
+            color: #333;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        
+        .footer p {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>TATA<span class="logo">IPL</span></h1>
+        <div class="navbar">
+            <ul>
+                <li><a href="">Home </a></li>
+                <li><a href="">Shoping</a></li>
+                <li><a href="">Blog</a></li>
+                <li><a href="">live match</a></li>
+                <li><a href="">Comment </a></li>
+                <div class="search-container">
+                    <input type="text" placeholder="search....." class="search-input">
+                    <button class="search-button">Search</button>
+                </div>
+            </ul>
+        </div>
+    </div>
+    <div class="content">
+        <div class="left">
+            <h1>CRICKET<span>FAN</span></h1>
+            <h2>Rajwant Singh</h2>
+            <p>please login the website and enjoy the cricket match af all time</p>
+            <a href="login.html"><button class="join">log in</button></a>
+
+
+        </div>
+
+        <div class="right">
+            <img src="ipl1.jpg" alt=" " class="ipllogo">
+        </div>
+    </div>
+    <hr>
+    <div class="containear">
+        <div class="card1">
+            <img class="imgcard" src="OIP1.JPG" alt="">
+            <hr class="line1">
+            <button class="shop">Shop now</button>
+
+        </div>
+        <div class="card2">
+            <img class="imgcard" src="ball.jpg" alt="">
+            <hr class="line2">
+            <button class="shop">Shop now</button>
+
+        </div>
+        <div class="card3">
+            <img class="imgcard" src="databse.jpg" alt="">
+            <hr class="line3">
+            <button class="shop">Shop now</button>
+        </div>
+    </div>
+    <div class="footer">
+
+        <p>
+            <a href="#">Home</a> |
+            <a href="#">About Us</a> |
+            <a href="#">Services</a> |
+            <a href="#">Contact</a>
+        </p>
+        <p>Contact us at: example@example.com</p>
+
+    </div>
+
+
+</body>
+
+</html>
